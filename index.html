@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tu  Sitio Web</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <!-- HEADER RESPONSIVE -->
+    <header class="nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>Tu<span class="brand-muted">.web</span></div>
+      </div>
+
+      <!-- Botón hamburguesa (mobile) -->
+      <button class="menuBtn" id="menuBtn" type="button" aria-label="Abrir menú" aria-expanded="false">
+        ☰
+      </button>
+
+      <!-- Menú (mobile: dropdown / desktop: inline) -->
+      <nav class="menu" id="menu" aria-label="Navegación principal">
+        <ul class="menuLinks">
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#proceso">Proceso</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+
+        <a class="btn menuCta" href="#contacto">Pedir presupuesto</a>
+      </nav>
+
+      <!-- CTA visible en desktop -->
+      <a class="" href="#contacto">Pedir presupuesto</a>
+    </header>
+
+    <main>
+      <!-- HERO + CARRUSEL -->
+      <section class="hero">
+        <div class="heroCard">
+          <div class="kicker">Diseño + Desarrollo</div>
+          <h1>Hago sitios web rápidos, modernos y listos para vender.</h1>
+          <p>
+            Landing pages, portfolios y webs para negocios. Enfoque en performance, SEO básico y una
+            experiencia prolija en celular y desktop.
+          </p>
+
+          <div class="heroActions">
+            <a class="btn" href="#contacto">Quiero mi web</a>
+            <a class="btn secondary" href="#servicios">Ver servicios</a>
+          </div>
+
+          <div class="heroChecks">
+            ✅ Entrega rápida • ✅ Hosting sugerido • ✅ Soporte post-lanzamiento
+          </div>
+        </div>
+
+        <div class="carousel" aria-label="Carrusel de trabajos">
+          <div class="slides">
+            <div class="slide">
+              <strong>Landing para negocio local</strong>
+              <div class="mock">Mockup #1</div>
+              <div class="slideNote">Sección hero + CTA + contacto</div>
+            </div>
+            <div class="slide">
+              <strong>Portfolio profesional</strong>
+              <div class="mock">Mockup #2</div>
+              <div class="slideNote">Proyectos, skills y formulario</div>
+            </div>
+            <div class="slide">
+              <strong>Web institucional</strong>
+              <div class="mock">Mockup #3</div>
+              <div class="slideNote">Servicios, testimonios y FAQs</div>
+            </div>
+          </div>
+
+          <!-- Dots centrados (decorativos) -->
+          <div class="dots" aria-hidden="true">
+            <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TARJETAS -->
+      <section id="servicios">
+        <div class="sectionTitle">
+          <h2>Servicios</h2>
+          <span>Lo que podés contratar</span>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="tag">Landing</div>
+            <h3>Landing page de ventas</h3>
+            <p>Ideal para campañas: hero, beneficios, CTA, formulario y WhatsApp.</p>
+          </article>
+
+          <article class="card">
+            <div class="tag">Web</div>
+            <h3>Web institucional</h3>
+            <p>Secciones completas: servicios, equipo, FAQs, contacto y mapa.</p>
+          </article>
+
+          <article class="card">
+            <div class="tag">Portfolio</div>
+            <h3>Portfolio / CV online</h3>
+            <p>Proyectos, stack, enlaces, y diseño prolijo para entrevistas.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- INFORMATIVA -->
+      <section id="proceso">
+        <div class="sectionTitle">
+          <h2>Cómo trabajamos</h2>
+          <span>Simple y ordenado</span>
+        </div>
+
+        <div class="infoGrid">
+          <div class="infoBox">
+            <h3>1) Brief + objetivos</h3>
+            <p>Definimos el objetivo (vender, captar leads, informar) y el contenido.</p>
+            <ul>
+              <li>Secciones necesarias</li>
+              <li>Estilo/branding</li>
+              <li>Texto e imágenes</li>
+            </ul>
+          </div>
+
+          <div class="infoBox">
+            <h3>2) Diseño + implementación</h3>
+            <p>Maquetado prolijo, performance, y ajustes finales antes de publicar.</p>
+            <ul>
+              <li>HTML/CSS o framework</li>
+              <li>Optimización básica</li>
+              <li>Deploy / hosting</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTO: FORM + IMAGEN DERECHA -->
+      <section id="contacto">
+        <div class="sectionTitle">
+          <h2>Contacto</h2>
+          <span>Contame tu idea</span>
+        </div>
+
+        <div class="contactGrid">
+          <form>
+            <div class="row">
+              <div class="field">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" type="text" placeholder="Tu nombre" />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="tu@mail.com" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="field">
+                <label for="tipo">Tipo de sitio</label>
+                <input id="tipo" type="text" placeholder="Landing / Web / Portfolio" />
+              </div>
+              <div class="field">
+                <label for="presupuesto">Presupuesto (opcional)</label>
+                <input id="presupuesto" type="text" placeholder="$..." />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" placeholder="¿Qué necesitás? ¿Para cuándo? ¿Tenés referencias?"></textarea>
+            </div>
+
+            <button class="btn" type="button">Enviar</button>
+
+            <div class="formNote">
+              * Este botón es visual (no envía nada). Si querés, te lo dejo funcionando con backend o Formspree.
+            </div>
+          </form>
+
+          <aside class="contactImg" aria-label="Imagen al lado del formulario"></aside>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="y"></span> TuNombre.web — Sitios web a medida · Buenos Aires
+    </footer>
+  </div>
+
+  <script>
+    // Año footer
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // Menú responsive
+    const btn = document.getElementById("menuBtn");
+    const menu = document.getElementById("menu");
+
+    btn.addEventListener("click", () => {
+      const isOpen = menu.classList.toggle("open");
+      btn.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    // Cerrar al tocar un link
+    menu.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => {
+        menu.classList.remove("open");
+        btn.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    // Cerrar si clickeás afuera
+    document.addEventListener("click", (e) => {
+      const clickInside = menu.contains(e.target) || btn.contains(e.target);
+      if (!clickInside) {
+        menu.classList.remove("open");
+        btn.setAttribute("aria-expanded", "false");
+      }
+    });
+  </script>
+</body>
+</html>
