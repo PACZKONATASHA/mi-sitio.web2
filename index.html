@@ -3,23 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Tu Sitio Web</title>
+  <title>Tu  Sitio Web</title>
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
   <div class="container">
-    <!-- HEADER RESPONSIVE (DEFINITIVO) -->
+    <!-- HEADER RESPONSIVE -->
     <header class="nav">
-      <a class="brand" href="#top" aria-label="Inicio">
-        <div class="logo">
-          <img src="logo.trasparente-mi sitio web.png" alt="Logo" style="width:100px;height:auto;">
-        </div>
-      </a>
+      <div class="brand">
+        <div class="logo" ></div>
+        
+      </div>
 
       <!-- Botón hamburguesa (mobile) -->
-      <button class="menuBtn" id="menuBtn" type="button"
-              aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+      <button class="menuBtn" id="menuBtn" type="button" aria-label="Abrir menú" aria-expanded="false">
         ☰
       </button>
 
@@ -31,15 +29,14 @@
           <li><a href="#contacto">Contacto</a></li>
         </ul>
 
-        <!-- CTA mobile -->
         <a class="btn menuCta" href="#contacto">Pedir presupuesto</a>
       </nav>
 
-      <!-- CTA desktop -->
-      <a class="btn desktopCta" href="#contacto">Pedir presupuesto</a>
+      <!-- CTA visible en desktop -->
+      <a class="" href="#contacto">Pedir presupuesto</a>
     </header>
 
-    <main id="top">
+    <main>
       <!-- HERO + CARRUSEL -->
       <section class="hero">
         <div class="heroCard">
@@ -144,7 +141,7 @@
         </div>
       </section>
 
-      <!-- CONTACTO -->
+      <!-- CONTACTO: FORM + IMAGEN DERECHA -->
       <section id="contacto">
         <div class="sectionTitle">
           <h2>Contacto</h2>
