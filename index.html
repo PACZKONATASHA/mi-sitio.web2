@@ -46,11 +46,20 @@
             Landing pages, portfolios y webs para negocios. Enfoque en performance, SEO básico y una
             experiencia prolija en celular y desktop.
           </p>
+<div class="heroActions">
+  <a
+    class="btn"
+    href="https://wa.me/5493786417162?text=Hola%2C%20quiero%20consultar%20por%20una%20web"
+    target="_blank"
+    rel="noopener"
+  >
+    Quiero mi web
+  </a>
 
-          <div class="heroActions">
-            <a class="btn" href="#contacto">Quiero mi web</a>
-            <a class="btn secondary" href="#servicios">Ver servicios</a>
-          </div>
+  <a class="btn secondary" href="#servicios">
+    Ver servicios
+  </a>
+</div>
 
           <div class="heroChecks">
             ✅ Entrega rápida • ✅ Hosting sugerido • ✅ Soporte post-lanzamiento
@@ -148,45 +157,82 @@
           <span>Contame tu idea</span>
         </div>
 
-        <div class="contactGrid">
-          <form>
-            <div class="row">
-              <div class="field">
-                <label for="nombre">Nombre</label>
-                <input id="nombre" type="text" placeholder="Tu nombre" />
-              </div>
-              <div class="field">
-                <label for="email">Email</label>
-                <input id="email" type="email" placeholder="tu@mail.com" />
-              </div>
-            </div>
+        <section id="contacto">
+  <div class="sectionTitle">
+    <h2>Contacto</h2>
+    <span>Contame tu idea</span>
+  </div>
 
-            <div class="row">
-              <div class="field">
-                <label for="tipo">Tipo de sitio</label>
-                <input id="tipo" type="text" placeholder="Landing / Web / Portfolio" />
-              </div>
-              <div class="field">
-                <label for="presupuesto">Presupuesto (opcional)</label>
-                <input id="presupuesto" type="text" placeholder="$..." />
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="mensaje">Mensaje</label>
-              <textarea id="mensaje" placeholder="¿Qué necesitás? ¿Para cuándo? ¿Tenés referencias?"></textarea>
-            </div>
-
-            <button class="btn" type="button">Enviar</button>
-
-            <div class="formNote">
-              * Este botón es visual (no envía nada). Si querés, te lo dejo funcionando con backend o Formspree.
-            </div>
-          </form>
-
-          <aside class="contactImg" aria-label="Imagen al lado del formulario"></aside>
+  <div class="contactGrid">
+    <form id="contactForm" novalidate>
+      <div class="row">
+        <div class="field">
+          <label for="nombre">Nombre</label>
+          <input
+            id="nombre"
+            type="text"
+            placeholder="Tu nombre"
+            autocomplete="name"
+          />
         </div>
-      </section>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="tipo">Tipo de sitio</label>
+          <input
+            id="tipo"
+            type="text"
+            placeholder="Landing / Web / Portfolio"
+          />
+        </div>
+
+        <div class="field">
+          <label for="presupuesto">Presupuesto (opcional)</label>
+          <input
+            id="presupuesto"
+            type="text"
+            placeholder="$..."
+            inputmode="numeric"
+          />
+        </div>
+      </div>
+<div class="field">
+  <label for="referencia">Sitio de referencia (opcional)</label>
+  <input
+    id="referencia"
+    type="url"
+    placeholder="https://ejemplo.com"
+  />
+</div>
+
+      <div class="field">
+        <label for="mensaje">Mensaje</label>
+        <textarea
+          id="mensaje"
+          placeholder="¿Qué necesitás?"
+        ></textarea>
+      </div>
+
+      <button class="btn" id="btnEnviar" type="button">
+        Enviar
+      </button>
+
+      <div class="formNote">
+        * Al hacer click se abre WhatsApp con tu mensaje armado automáticamente.
+      </div>
+    </form>
+
+    <aside
+      class="contactImg"
+      aria-label="Imagen al lado del formulario"
+    ></aside>
+  </div>
+</section>
+
+<!-- JS SIEMPRE AL FINAL -->
+<script src="./js/index.js"></script>
+
     </main>
 
     <footer>
@@ -224,5 +270,9 @@
       }
     });
   </script>
+  <script src="./js/index.js"></script>
+</body>
+</html>
+
 </body>
 </html>
