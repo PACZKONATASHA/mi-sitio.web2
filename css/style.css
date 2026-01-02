@@ -515,4 +515,447 @@ footer{
   .infoGrid{grid-template-columns: 1fr 1fr;}
   .contactGrid{grid-template-columns: 1fr 1fr;}
   .row{grid-template-columns: 1fr 1fr;}
+
+}
+/* =========================
+   SECCIÓN DISPOSITIVOS (AISLADA)
+   ========================= */
+.devicesSection{
+  margin-top: 56px;
+}
+
+.devicesContainer{
+  max-width: var(--max, 1100px);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.devicesHeader{
+  display: grid;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.devicesTag{
+  display: inline-flex;
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.04);
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: .5px;
+}
+
+.devicesHeader h2{
+  margin: 0;
+  font-size: clamp(22px, 3vw, 32px);
+  line-height: 1.15;
+}
+
+.devicesHeader p{
+  margin: 0;
+  color: var(--muted);
+  max-width: 70ch;
+}
+
+.devicesHighlight{
+  color: var(--text);
+  text-shadow: 0 0 22px rgba(124,92,255,.18);
+}
+
+/* Layout */
+.devicesShowcase{
+  display: grid;
+  gap: 18px;
+  align-items: end;
+}
+
+/* Desktop: 3 columnas */
+@media (min-width: 980px){
+  .devicesShowcase{
+    grid-template-columns: 1.2fr .55fr .7fr;
+    gap: 22px;
+  }
+}
+
+/* Tarjeta dispositivo */
+.device{
+  display: flex;
+  justify-content: center;
+}
+
+/* Pantallas: MUY IMPORTANTE para que el scroll no “vuele” */
+.deviceScreen{
+  position: relative;
+  overflow: hidden;
+  background: rgba(0,0,0,.45);
+}
+
+/* Contenedor que se anima */
+.deviceShot{
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  display: flex;
+  flex-direction: column;
+  will-change: transform;
+}
+
+.deviceShot img{
+  width: 100%;
+  display: block;
+}
+
+/* ========== LAPTOP ========== */
+.laptopFrame{
+  width: min(640px, 100%);
+}
+
+.laptopTop{
+  height: 34px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  border: 1px solid var(--border);
+  border-bottom: none;
+  border-radius: 18px 18px 0 0;
+  background: rgba(255,255,255,.05);
+}
+
+.chromeDot{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.18);
+  border: 1px solid rgba(255,255,255,.10);
+}
+.chromeDot:nth-child(1){ background: #ff5f56; border-color: rgba(0,0,0,.18); }
+.chromeDot:nth-child(2){ background: #ffbd2e; border-color: rgba(0,0,0,.18); }
+.chromeDot:nth-child(3){ background: #27c93f; border-color: rgba(0,0,0,.18); }
+
+.laptopScreen{
+  height: 340px;
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 18px 18px;
+}
+
+/* más chico en mobile */
+@media (max-width: 520px){
+  .laptopScreen{ height: 240px; }
+}
+
+/* base */
+.laptopBottom{
+  height: 10px;
+}
+
+/* ========== PHONE ========== */
+.phoneFrame{
+  width: 170px;
+  height: 360px;
+  border-radius: 34px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.04);
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.phoneNotch{
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 76px;
+  height: 20px;
+  background: rgba(0,0,0,.55);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 0 0 12px 12px;
+  z-index: 3;
+}
+
+.phoneScreen{
+  height: 100%;
+  border-radius: 26px;
+  border: 1px solid rgba(255,255,255,.10);
+}
+
+.phoneBar{
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 64px;
+  height: 5px;
+  background: rgba(255,255,255,.14);
+  border-radius: 99px;
+}
+
+/* ========== TABLET ========== */
+.tabletFrame{
+  width: 240px;
+  height: 330px;
+  border-radius: 18px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.04);
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.tabletCam{
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  background: rgba(255,255,255,.18);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 50%;
+  z-index: 3;
+}
+
+.tabletScreen{
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.10);
+}
+
+/* CTA */
+.devicesCta{
+  display: inline-flex;
+  margin-top: 18px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(52,211,153,.35);
+  background: linear-gradient(135deg, rgba(52,211,153,.35), rgba(124,92,255,.22));
+  box-shadow: var(--shadow);
+  font-weight: 800;
+  color: var(--text);
+  text-decoration: none;
+}
+/* =========================
+ /* =========================
+   DISPOSITIVOS: SIN ESTILO CHROME + PROPORCIONES
+   ========================= */
+
+/* Oculta la barra superior y puntos (si existen) */
+.devicesSection .laptopTop,
+.devicesSection .chromeDot{
+  display: none !important;
+}
+
+/* Laptop: pantalla con marco simple */
+.devicesSection .laptopFrame{
+  width: min(860px, 100%);
+}
+
+.devicesSection .laptopScreen{
+  height: clamp(260px, 32vw, 460px);
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: rgba(0,0,0,.35);
+}
+
+/* El “bottom” que quede sutil (o lo podés ocultar) */
+.devicesSection .laptopBottom{
+  display: none;
+}
+
+/* Tablet y Phone: marco simple, sin brillos raros */
+.devicesSection .phoneFrame,
+.devicesSection .tabletFrame{
+  background: rgba(0,0,0,.25);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+/* Ajustes de proporción (DESKTOP) */
+@media (min-width: 980px){
+  .devicesSection .devicesShowcase{
+    grid-template-columns: 1.4fr .7fr .9fr;
+    gap: 28px;
+    align-items: end;
+  }
+
+  /* laptop protagonista y legible */
+  .devicesSection .device--laptop{
+    justify-content: flex-start;
+  }
+
+  /* Phone */
+  .devicesSection .phoneFrame{
+    width: 210px;
+    height: 430px;
+    border-radius: 34px;
+  }
+
+  /* Tablet */
+  .devicesSection .tabletFrame{
+    width: 310px;
+    height: 410px;
+    border-radius: 22px;
+  }
+}
+
+/* Mobile: mantenemos lo que ya te gustó */
+@media (max-width: 520px){
+  .devicesSection .laptopScreen{
+    height: 240px;
+  }
+  .devicesSection .phoneFrame{
+    width: 170px;
+    height: 360px;
+  }
+  .devicesSection .tabletFrame{
+    width: 240px;
+    height: 330px;
+  }
+}
+/* =========================
+   DISPOSITIVOS LIMPIOS (SIN CHROME)
+   ========================= */
+
+/* Laptop sin barra chrome */
+.devicesSection .laptopTop,
+.devicesSection .chromeDot,
+.devicesSection .laptopBottom{
+  display:none !important;
+}
+
+/* Laptop protagonista */
+.devicesSection .laptopFrame{
+  width: min(900px, 100%);
+}
+
+.devicesSection .laptopScreen{
+  height: clamp(280px, 34vw, 480px);
+  border-radius: 20px;
+  border:1px solid var(--border);
+  background: rgba(0,0,0,.35);
+}
+
+/* Tablet y phone simples */
+.devicesSection .phoneFrame,
+.devicesSection .tabletFrame{
+  background: rgba(0,0,0,.25);
+  border:1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+/* Desktop layout */
+@media (min-width: 980px){
+  .devicesSection .devicesShowcase{
+    grid-template-columns: 1.5fr .7fr .9fr;
+    gap: 32px;
+    align-items: end;
+  }
+
+  .devicesSection .device--laptop{
+    justify-content: flex-start;
+  }
+
+  .devicesSection .phoneFrame{
+    width: 210px;
+    height: 430px;
+    border-radius: 34px;
+  }
+
+  .devicesSection .tabletFrame{
+    width: 310px;
+    height: 410px;
+    border-radius: 22px;
+  }
+}
+
+/* Mobile: lo dejamos como te gusta */
+@media (max-width: 520px){
+  .devicesSection .laptopScreen{ height: 240px; }
+  .devicesSection .phoneFrame{ width: 170px; height: 360px; }
+  .devicesSection .tabletFrame{ width: 240px; height: 330px; }
+}
+
+/* Opcional: ocultar notch/cámara */
+.devicesSection .phoneNotch,
+.devicesSection .phoneBar,
+.devicesSection .tabletCam{
+  display:none !important;
+}
+/* ====== DISPOSITIVOS: PROPORCIONES + SIN CHROME ====== */
+
+/* (Si tenías barra/puntitos del estilo Chrome, los apagamos) */
+.devicesSection .laptopTop,
+.devicesSection .chromeDot,
+.devicesSection .laptopBottom{
+  display:none !important;
+}
+
+/* Laptop / Tablet / Phone: marcos simples */
+.devicesSection .phoneFrame,
+.devicesSection .tabletFrame{
+  background: rgba(0,0,0,.25);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+/* Pantallas (IMPORTANTE: para que el scroll se vea bien) */
+.devicesSection .deviceScreen{
+  position: relative;
+  overflow: hidden;
+  background: rgba(0,0,0,.35);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+/* Contenedor scrolleable */
+.devicesSection .deviceShot{
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  display: flex;
+  flex-direction: column;
+  will-change: transform;
+  transform: translateY(0);
+}
+
+.devicesSection .deviceShot img{
+  width: 100%;
+  display: block;
+}
+
+/* FORZAR QUE SE VEAN LOS 3 DISPOSITIVOS */
+.devicesSection .devicesShowcase{
+  display: grid !important;
+  gap: 28px;
+  align-items: end;
+}
+
+@media (min-width: 980px){
+  .devicesSection .devicesShowcase{
+    grid-template-columns: 1.55fr 0.75fr 0.95fr; /* laptop + phone + tablet */
+  }
+}
+
+/* Asegura que el item de laptop no colapse */
+.devicesSection .device--laptop{
+  display: flex !important;
+  justify-content: flex-start;
+  min-width: 0;
+}
+
+/* Laptop tamaños */
+.devicesSection .laptopFrame{
+  width: min(920px, 100%);
+}
+
+.devicesSection .laptopScreen{
+  position: relative;
+  overflow: hidden;
+  height: clamp(320px, 34vw, 520px);
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: rgba(0,0,0,.35);
 }
