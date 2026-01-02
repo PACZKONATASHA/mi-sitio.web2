@@ -203,66 +203,95 @@ h1{
     radial-gradient(600px 260px at 80% 80%, rgba(52,211,153,.18), transparent 55%);
 }
 
-.mock{
-  flex:1;
-  border-radius: 16px;
-  border:1px solid var(--border);
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.06), transparent 55%),
-    repeating-linear-gradient(90deg, rgba(255,255,255,.06) 0 8px, transparent 8px 16px);
-  display:grid;
-  place-items:center;
-  color:rgba(255,255,255,.75);
-  font-weight:700;
-  min-height: 130px;
-}
-
 .slide strong{font-size:18px}
-
 .slideNote{color:var(--muted); font-size:13px}
 
-/* DOTS centrados */
-.dots{
+/* CONTENEDOR de imagen (responsive) */
+/* CONTENEDOR tipo navegador (Chrome) */
+.mock{
+  position: relative;
+  flex:1;
+  border-radius: 14px;
+  border:1px solid var(--border);
+  background: #1f1f1f;
+  overflow:hidden;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  min-height: 220px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.04);
+}
+
+/* Barra superior tipo Chrome */
+.mock::before{
+  content:"";
   position:absolute;
-  bottom:12px;
-  left:50%;
-  transform: translateX(-50%);
-  display:flex;
-  gap:8px;
-  background: rgba(0,0,0,.25);
-  border:1px solid rgba(255,255,255,.12);
-  padding:6px 10px;
-  border-radius:999px;
+  top:0;
+  left:0;
+  right:0;
+  height:34px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,.08),
+    rgba(255,255,255,.02)
+  );
+
+  border-bottom:1px solid rgba(255,255,255,.12);
+  z-index:2;
 }
 
-.dot{
-  width:9px;
-  height:9px;
+/* Botones Chrome (rojo, amarillo, verde) */
+.mock::after{
+  content:"";
+  position:absolute;
+  top:11px;
+  left:12px;
+  width:10px;
+  height:10px;
   border-radius:50%;
-  background: rgba(255,255,255,.25);
-  border:1px solid rgba(255,255,255,.15);
+
+  background:#ff5f56;
+  box-shadow:
+    14px 0 0 #ffbd2e,
+    28px 0 0 #27c93f;
+
+  z-index:3;
 }
 
-@keyframes slide{
-  0%, 25% {transform: translateX(0)}
-  33%, 58% {transform: translateX(-33.333%)}
-  66%, 91% {transform: translateX(-66.666%)}
-  100% {transform: translateX(0)}
+/* Imagen (pantallazo completo, sin recorte) */
+.mock img{
+  max-width:100%;
+  max-height:100%;
+  width:auto;
+  height:auto;
+  display:block;
+
+  object-fit: contain;
+  object-position: center;
+
+  /* separa la imagen de la barra */
+  padding-top: 34px;
 }
 
-/* SECCIONES */
-section{margin-top:26px}
+/* Mobile */
+@media (max-width: 520px){
+  .mock{
+    min-height: 170px;
+  }
 
-.sectionTitle{
-  display:flex;
-  align-items:baseline;
-  justify-content:space-between;
-  gap:16px;
+  .mock::before{
+    height:28px;
+  }
+
+  .mock img{
+    padding-top: 28px;
+  }
 }
 
-.sectionTitle h2{margin:0; font-size:22px}
 
-.sectionTitle span{color:var(--muted)}
 
 /* TARJETAS (mobile-first) */
 .cards{
