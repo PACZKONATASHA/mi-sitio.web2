@@ -62,3 +62,134 @@
     window.open(url, "_blank", "noopener");
   });
 })();
+(function initDevicesScroll() {
+  const map = [
+    { screenSel: ".devicesSection .laptopScreen", shotSel: ".devicesSection .laptopShot", name: "laptop", duration: 40 },
+    { screenSel: ".devicesSection .tabletScreen", shotSel: ".devicesSection .tabletShot", name: "tablet", duration: 48 },
+    { screenSel: ".devicesSection .phoneScreen",  shotSel: ".devicesSection .phoneShot",  name: "phone",  duration: 55 },
+  ];
+
+  function setup(device) {
+    const screen = document.querySelector(device.screenSel);
+    const shot = document.querySelector(device.shotSel);
+    if (!screen || !shot) return;
+
+    const imgs = Array.from(shot.querySelectorAll("img"));
+    if (!imgs.length) return;
+
+    let loaded = 0;
+    const onReady = () => {
+      // recalcular tamaños ya con imágenes cargadas
+      const screenH = screen.clientHeight;
+      const totalH = shot.scrollHeight;
+      const dist = totalH - screenH;
+
+      if (dist <= 0) return;
+
+      const keyName = `devScroll_${device.name}`;
+      const style = document.createElement("style");
+      style.textContent = `
+        @keyframes ${keyName} {
+          0%, 10% { transform: translateY(0); }
+          45%, 55% { transform: translateY(-${dist}px); }
+          90%, 100% { transform: translateY(0); }
+        }
+      `;
+      document.head.appendChild(style);
+
+      shot.style.animation = `${keyName} ${device.duration}s ease-in-out infinite`;
+    };
+
+    imgs.forEach(img => {
+      if (img.complete) {
+        loaded++;
+        if (loaded === imgs.length) onReady();
+      } else {
+        img.addEventListener("load", () => {
+          loaded++;
+          if (loaded === imgs.length) onReady();
+        }, { once: true });
+      }
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    map.forEach(setup);
+  });
+})();
+(function initDevicesScrollAll() {
+  const devices = [
+    { name: "laptop", screenSel: ".devicesSection .laptopScreen", shotSel: ".devicesSection .laptopShot", duration: 40 },
+    { name: "tablet", screenSel: ".devicesSection .tabletScreen", shotSel: ".devicesSection .tabletShot", duration: 46 },
+    { name: "phone",  screenSel: ".devicesSection .phoneScreen",  shotSel: ".devicesSection .phoneShot",  duration: 52 },
+  ];
+
+  function waitImages(shot, cb) {
+    const imgs = Array.from(shot.querySelectorAll("img"));
+    if (!imgs.length) return;
+    let loaded = 0;
+
+    const done = () => {
+      loaded++;
+      if (loaded === imgs.length) cb();
+    };
+
+    imgs.forEach(img => {
+      if (img.complete) done();
+      else img.addEventListener("load", done, { once: true });
+    });
+  }
+
+  function applyAnimation(device) {
+    const screen = document.querySelector(device.screenSel);
+    const shot = document.querySelector(device.shotSel);
+    if (!screen || !shot) return;
+
+    // reset para recalcular bien
+    shot.style.animation = "none";
+    shot.style.transform = "translateY(0)";
+
+    // OJO: el scrollHeight ya con imgs cargadas
+    const screenH = screen.clientHeight;
+    const totalH = shot.scrollHeight;
+    const dist = totalH - screenH;
+    if (dist <= 0) return;
+
+    const keyName = `devScroll_${device.name}_${Math.floor(Math.random()*1e9)}`;
+    const style = document.createElement("style");
+    style.textContent = `
+      @keyframes ${keyName} {
+        0%, 10% { transform: translateY(0); }
+        45%, 55% { transform: translateY(-${dist}px); }
+        90%, 100% { transform: translateY(0); }
+      }
+    `;
+    document.head.appendChild(style);
+
+    // reflow para que tome el reset
+    void shot.offsetHeight;
+
+    shot.style.animation = `${keyName} ${device.duration}s ease-in-out infinite`;
+  }
+
+  function init() {
+    devices.forEach(device => {
+      const shot = document.querySelector(device.shotSel);
+      if (!shot) return;
+
+      waitImages(shot, () => applyAnimation(device));
+    });
+  }
+
+  // Inicia cuando el DOM está listo
+  document.addEventListener("DOMContentLoaded", init);
+
+  // Recalcula en resize (si cambia el alto, cambia el scrollDistance)
+  let resizeTimer = null;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      devices.forEach(applyAnimation);
+    }, 250);
+  });
+})();
