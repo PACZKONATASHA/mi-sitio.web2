@@ -343,6 +343,157 @@ h1{
 
 .infoBox ul{margin:10px 0 0; padding-left:18px; color:var(--muted)}
 
+/* Encabezado del contacto centrado */
+#contacto .sectionTitle{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  gap:14px;
+  margin-bottom:24px;
+  width:100%;
+}
+
+#contacto .sectionTitle h2{
+  margin:0;
+  font-size:28px;
+  font-weight:800;
+  letter-spacing:.2px;
+  line-height:1.1;
+}
+
+/* Badge redondo con ícono */
+#contacto .ideaBadge{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 18px;
+  border-radius:999px;
+
+  background: linear-gradient(135deg, rgba(124,92,255,.25), rgba(52,211,153,.22));
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow: var(--shadow);
+
+  color: var(--text);
+  font-weight:800;
+  font-size:14px;
+}
+
+/* Ícono lámpara */
+/* =========================
+   BLOQUE IDEA (ICONO + TEXTO)
+   ========================= */
+
+#contacto .ideaBlock{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  margin-top: 6px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Ícono */
+#contacto .ideaIcon{
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  display: block;
+
+  filter: invert(1) opacity(.9);
+  transition: transform .25s ease, filter .25s ease;
+}
+
+/* Texto debajo del ícono */
+/* =========================
+   TITULOS DE SECCION – GLOBAL
+   ========================= */
+
+/* =========================
+   TITULOS DE SECCION CON ICONO
+   ========================= */
+
+.sectionTitle{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+
+  margin-bottom: 28px;
+  width: 100%;
+}
+
+/* ÍCONO */
+.sectionIcon{
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  display: block;
+
+  filter: invert(1) opacity(.9);
+  transition: transform .25s ease, filter .25s ease;
+}
+
+/* TÍTULO */
+.sectionTitle h2{
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: .3px;
+  line-height: 1.1;
+}
+
+/* SUBTÍTULO */
+.sectionTitle span{
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .4px;
+  color: var(--muted);
+}
+
+/* Hover sutil (opcional, queda muy bien) */
+.sectionTitle:hover .sectionIcon{
+  transform: translateY(-3px) scale(1.05);
+  filter: invert(1) opacity(1) drop-shadow(0 0 8px rgba(124,92,255,.35));
+}
+
+/* Tablet */
+@media (min-width: 768px){
+  .sectionIcon{
+    width: 72px;
+    height: 72px;
+  }
+
+  .sectionTitle h2{
+    font-size: 30px;
+  }
+
+  .sectionTitle span{
+    font-size: 15px;
+  }
+}
+
+/* Desktop grande */
+@media (min-width: 1024px){
+  .sectionIcon{
+    width: 80px;
+    height: 80px;
+  }
+
+  .sectionTitle h2{
+    font-size: 34px;
+  }
+}
+
+
+
+
 /* CONTACTO (mobile-first) */
 .contactGrid{
   display:grid;
