@@ -185,11 +185,10 @@
   document.addEventListener("DOMContentLoaded", init);
 
   // Recalcula en resize (si cambia el alto, cambia el scrollDistance)
-  let resizeTimer = null;
-  window.addEventListener("resize", () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-      devices.forEach(applyAnimation);
-    }, 250);
-  });
-})();
+const btn = document.getElementById("menuBtn");
+const menu = document.getElementById("menuMobile");
+
+btn.addEventListener("click", () => {
+  const open = menu.classList.toggle("open");
+  btn.setAttribute("aria-expanded", open ? "true" : "false");
+});
