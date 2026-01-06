@@ -191,4 +191,4 @@ const menu = document.getElementById("menuMobile");
 btn.addEventListener("click", () => {
   const open = menu.classList.toggle("open");
   btn.setAttribute("aria-expanded", open ? "true" : "false");
-});
+})
