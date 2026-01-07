@@ -10,31 +10,29 @@
 <body>
 
 <header class="nav">
-  <!-- Logo -->
   <a class="brand" href="#">
     <img class="brandLogo" src="./img/logo.png" alt="Natasha Paczko">
   </a>
 
-  <!-- Links desktop -->
   <nav class="menuDesktop" aria-label="Navegación principal">
     <a href="#servicios">Servicios</a>
     <a href="#proceso">Proceso</a>
     <a href="#contacto">Contacto</a>
   </nav>
 
-  <!-- ÚNICO CTA -->
-  <a class="btn cta" href="#contacto">Pedir presupuesto</a>
+  <!-- CTA DESKTOP (afuera) -->
+  <a class="btn cta desktopOnly" href="#contacto">Pedir presupuesto</a>
 
-  <!-- Hamburguesa mobile -->
-  <button class="menuBtn" id="menuBtn" type="button" aria-label="Abrir menú" aria-expanded="false">
-    ☰
-  </button>
+  <button class="menuBtn" id="menuBtn" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
 
-  <!-- Menú mobile (SIN botón) -->
+  <!-- MENÚ MOBILE (con CTA adentro) -->
   <nav class="menuMobile" id="menuMobile" aria-label="Menú móvil">
     <a href="#servicios">Servicios</a>
     <a href="#proceso">Proceso</a>
     <a href="#contacto">Contacto</a>
+
+    <!-- CTA MOBILE (adentro) -->
+    <a class="btn cta menuCta mobileOnly" href="#contacto">Pedir presupuesto</a>
   </nav>
 </header>
 
@@ -312,50 +310,14 @@
   </div>
 </section>
 
+<footer>
+  © <span id="y"></span> TuNombre.web — Sitios web a medida · Buenos Aires
+</footer>
 
-<!-- JS SIEMPRE AL FINAL -->
-<script src="./js/index.js"></script>
-
-    </main>
-
-    <footer>
-      © <span id="y"></span> TuNombre.web — Sitios web a medida · Buenos Aires
-    </footer>
-  </div>
-
-  <script>
-    // Año footer
-    document.getElementById("y").textContent = new Date().getFullYear();
-
-    // Menú responsive
-    const btn = document.getElementById("menuBtn");
-    const menu = document.getElementById("menu");
-
-    btn.addEventListener("click", () => {
-      const isOpen = menu.classList.toggle("open");
-      btn.setAttribute("aria-expanded", String(isOpen));
-    });
-
-    // Cerrar al tocar un link
-    menu.querySelectorAll("a").forEach(a => {
-      a.addEventListener("click", () => {
-        menu.classList.remove("open");
-        btn.setAttribute("aria-expanded", "false");
-      });
-    });
-
-    // Cerrar si clickeás afuera
-    document.addEventListener("click", (e) => {
-      const clickInside = menu.contains(e.target) || btn.contains(e.target);
-      if (!clickInside) {
-        menu.classList.remove("open");
-        btn.setAttribute("aria-expanded", "false");
-      }
-    });
-  </script>
-  <script src="./js/index.js"></script>
+<script src="./js/index.js" defer></script>
 </body>
 </html>
 
-</body>
-</html>
+  
+
+

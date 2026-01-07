@@ -22,143 +22,39 @@ section{margin-top:26px}
 /* HEADER BASE */
 /* ================= HEADER (DESKTOP + MOBILE) ================= */
 
-/* BASE */
-.nav{
-  display:grid;
-  grid-template-columns:auto 1fr auto auto; /* logo | links | cta | burger */
-  align-items:center;
-  gap:18px;
-  padding:16px 18px;
-  position:relative;
-}
-
-/* LOGO */
+.nav{display:grid;grid-template-columns:auto 1fr auto auto;align-items:center;gap:18px;padding:16px 18px;position:relative}
 .brand{display:flex;align-items:center;text-decoration:none}
-.brandLogo{
-  height:200px;
-  width:auto;
-  display:block;
-  object-fit:contain;
-}
-
-/* LINKS DESKTOP */
-.menuDesktop{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:22px;
-}
-.menuDesktop a{
-  color:var(--text);
-  text-decoration:none;
-  padding:10px 12px;
-  border-radius:14px;
-}
+.brandLogo{height:90px;width:auto;display:block;object-fit:contain}
+.menuDesktop{display:flex;align-items:center;justify-content:center;gap:22px}
+.menuDesktop a{color:var(--text);text-decoration:none;padding:10px 12px;border-radius:14px}
 .menuDesktop a:hover{background:rgba(0,0,0,.18)}
-
-/* BOTONES */
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:10px 16px;
-  border-radius:16px;
-  border:1px solid var(--border);
-  background:rgba(0,0,0,.18);
-  color:var(--text);
-  text-decoration:none;
-  white-space:nowrap;
-}
-
-/* CTA ÚNICO (desktop: derecha) */
-.cta{justify-self:end;font-weight:700;box-shadow:0 12px 28px rgba(0,0,0,.25)}
-
-/* HAMBURGUESA */
-.menuBtn{
-  display:none;
-  align-items:center;
-  justify-content:center;
-  width:46px;
-  height:42px;
-  border-radius:16px;
-  border:1px solid var(--border);
-  background:rgba(0,0,0,.18);
-  color:var(--text);
-  cursor:pointer;
-}
-
-/* MENÚ MOBILE (dropdown) */
-.menuMobile{
-  display:none;
-  position:absolute;
-  top:82px;
-  right:14px;
-  width:min(320px,calc(100vw - 28px));
-  background:rgba(18,26,43,.96);
-  border:1px solid rgba(255,255,255,.10);
-  border-radius:18px;
-  padding:10px;
-  box-shadow:var(--shadow);
-  z-index:50;
-  text-align:left;
-  backdrop-filter: blur(10px);
-}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 16px;border-radius:16px;border:1px solid var(--border);background:rgba(0,0,0,.18);color:var(--text);text-decoration:none;white-space:nowrap}
+.cta{font-weight:700;box-shadow:0 12px 28px rgba(0,0,0,.25)}
+.menuBtn{display:none;align-items:center;justify-content:center;width:46px;height:42px;border-radius:16px;border:1px solid var(--border);background:rgba(0,0,0,.18);color:var(--text);cursor:pointer}
+.menuMobile{display:none;position:absolute;top:92px;right:14px;width:min(320px,calc(100vw - 28px));background:rgba(18,26,43,.96);border:1px solid rgba(255,255,255,.10);border-radius:18px;padding:10px;box-shadow:var(--shadow);z-index:50;text-align:left;backdrop-filter:blur(10px)}
 .menuMobile.open{display:block}
-.menuMobile a{
-  display:flex;
-  align-items:center;
-  padding:12px 12px;
-  color:var(--text);
-  text-decoration:none;
-  border-radius:14px;
-}
+.menuMobile a{display:block;padding:12px;color:var(--text);text-decoration:none;border-radius:14px}
 .menuMobile a:hover{background:rgba(255,255,255,.06)}
+.menuCta{margin-top:8px;width:100%}
+.mobileOnly{display:none}
 
-/* ================= MOBILE ================= */
 @media (max-width: 899px){
   .nav{
-    grid-template-columns:1fr auto;
-    grid-template-areas:
-      "brand burger"
-      "cta   cta";
+    grid-template-columns:1fr auto; /* solo logo + burger */
     gap:12px;
     padding:12px 14px;
   }
 
-  .brand{grid-area:brand}
-  .menuBtn{
-    grid-area:burger;
-    display:inline-flex;
-    width:44px;
-    height:44px;
-    border-radius:16px;
-    background:rgba(0,0,0,.14);
-  }
+  .brandLogo{height:115px}
 
-  /* ocultar links desktop */
-  .menuDesktop{display:none}
+  .menuDesktop{display:none !important}
+  .desktopOnly{display:none !important}  /* 👈 mata el botón de desktop */
+  .menuBtn{display:inline-flex}
 
-  /* logo grande pero estético */
-  .brandLogo{
-    height:105px;
-    width:auto;
-    object-fit:contain;
-  }
+  .mobileOnly{display:inline-flex}
+  .menuMobile{text-align:center}
+.menuMobile a{justify-content:center}
 
-  /* CTA centrado y consistente */
-  .cta{
-    grid-area:cta;
-    justify-self:center;
-    width:min(320px,92%);
-    padding:12px 18px;
-    border-radius:18px;
-  }
-
-  /* dropdown alineado */
-  .menuMobile{
-    top:92px;
-    right:14px;
-  }
 }
 
 
