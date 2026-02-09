@@ -3,336 +3,215 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Tu  Sitio Web</title>
+  <title>Diseño de Webs Simples y Modernas | Natasha Paczko</title>
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header class="nav">
   <a class="brand" href="#">
     <img class="brandLogo" src="./img/logo.png" alt="Natasha Paczko">
   </a>
 
   <nav class="menuDesktop" aria-label="Navegación principal">
-    <a href="#servicios">Servicios</a>
-    <a href="#proceso">Proceso</a>
+    <a href="#que-hago">Qué hago</a>
+    <a href="#como-trabajo">Cómo trabajo</a>
     <a href="#contacto">Contacto</a>
   </nav>
 
-  <!-- CTA DESKTOP (afuera) -->
-  <a class="btn cta desktopOnly" href="#contacto">Pedir presupuesto</a>
+  <a class="btn cta desktopOnly" href="#contacto">Quiero mi web</a>
 
   <button class="menuBtn" id="menuBtn" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
 
-  <!-- MENÚ MOBILE (con CTA adentro) -->
   <nav class="menuMobile" id="menuMobile" aria-label="Menú móvil">
-    <a href="#servicios">Servicios</a>
-    <a href="#proceso">Proceso</a>
+    <a href="#que-hago">Qué hago</a>
+    <a href="#como-trabajo">Cómo trabajo</a>
     <a href="#contacto">Contacto</a>
-
-    <!-- CTA MOBILE (adentro) -->
-    <a class="btn cta menuCta mobileOnly" href="#contacto">Pedir presupuesto</a>
+    <a class="btn cta menuCta mobileOnly" href="#contacto">Quiero mi web</a>
   </nav>
 </header>
 
-    <main>
-      <!-- HERO + CARRUSEL -->
-      <section class="hero">
-        <div class="heroCard">
-          <div class="kicker">Diseño + Desarrollo</div>
-          <h1>Hago sitios web rápidos, modernos y listos para vender.</h1>
-          <p>
-            Landing pages, portfolios y webs para negocios. Enfoque en performance, SEO básico y una
-            experiencia prolija en celular y desktop.
-          </p>
-<div class="heroActions">
-  <a
-    class="btn"
-    href="https://wa.me/5493786417162?text=Hola%2C%20quiero%20consultar%20por%20una%20web"
-    target="_blank"
-    rel="noopener"
-  >
-    Quiero mi web
-  </a>
+<main>
 
-  <a class="btn secondary" href="#servicios">
-    Ver servicios
-  </a>
-</div>
-
-          <div class="heroChecks">
-            ✅ Entrega rápida • ✅ Hosting sugerido • ✅ Soporte post-lanzamiento
-          </div>
-        </div>
-
-      <div class="carousel" aria-label="Carrusel de trabajos">
-  <div class="slides">
-    <div class="slide">
-      <strong>Benka — Tienda de ropa</strong>
-
-      <div class="mock">
-        <img src="./img/benka.png" alt="Benka - tienda de ropa" loading="lazy" />
-      </div>
-
-      <div class="slideNote">Landing + catálogo</div>
-    </div>
-
-    <div class="slide">
-      <strong>Blanquería — Carrito de compras</strong>
-
-      <div class="mock">
-        <img src="./img/blanqueria.png" alt="Blanquería con carrito de compras" loading="lazy" />
-      </div>
-
-      <div class="slideNote">E-commerce + checkout</div>
-    </div>
-
-    <div class="slide">
-      <strong>Web institucional</strong>
-
-      <div class="mock">
-        <img src="./img/institucional.png" alt="Web institucional" loading="lazy" />
-      </div>
-
-      <div class="slideNote">Servicios, testimonios y FAQs</div>
+<!-- 1️⃣ HERO -->
+<section class="hero" id="hero">
+  <div class="heroContainer">
+    <h1>Diseño sitios web simples y modernos para negocios chicos y emprendedores.</h1>
+    
+    <p class="heroSub">Webs claras, rápidas y pensadas para que tus clientes te escriban y te encuentren online.</p>
+    
+    <p class="heroSmall">Trabajo de manera personalizada y cercana, acompañándote en todo el proceso.</p>
+    
+    <div class="heroActions">
+      <a class="btn" href="https://wa.me/5493786417162?text=Hola%2C%20quiero%20consultar%20por%20una%20web" target="_blank" rel="noopener">
+        🟤 Quiero mi web
+      </a>
+      <a class="btn secondary" href="#ejemplos">
+        ⚪ Ver ejemplos
+      </a>
     </div>
   </div>
+</section>
 
-  <div class="dots" aria-hidden="true">
-    <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+<!-- 2️⃣ QUÉ HAGO -->
+<section class="sectionRosa" id="que-hago">
+  <div class="container">
+    <h2>Qué hago</h2>
+    
+    <p class="sectionLead">Diseño páginas web a medida para negocios que quieren verse profesionales sin complicarse.</p>
+    
+    <div class="textBlock">
+      <p><strong>Puedo ayudarte si necesitás:</strong></p>
+      <ul class="bulletList">
+        <li>Una web simple para mostrar tu negocio</li>
+        <li>Una página clara para recibir consultas por WhatsApp</li>
+        <li>Presencia online para empezar a vender o crecer</li>
+      </ul>
+      <p class="highlight">💡 Si no sabés qué tipo de web necesitás, lo vemos juntas.</p>
+    </div>
   </div>
-</div>
+</section>
 
-
-      <!-- TARJETAS -->
-    <div class="sectionTitle">
-  <img class="sectionIcon" src="./img/icono_herramienta_transparente.png" alt="Servicios">
-  <h2>Servicios</h2>
-  <span>Lo que podés contratar</span>
-</div>
-
-
-        <div class="cards">
-          <article class="card">
-            <div class="tag">Landing</div>
-            <h3>Landing page de ventas</h3>
-            <p>Ideal para campañas: hero, beneficios, CTA, formulario y WhatsApp.</p>
-          </article>
-
-          <article class="card">
-            <div class="tag">Web</div>
-            <h3>Web institucional</h3>
-            <p>Secciones completas: servicios, equipo, FAQs, contacto y mapa.</p>
-          </article>
-
-          <article class="card">
-            <div class="tag">Portfolio</div>
-            <h3>Portfolio / CV online</h3>
-            <p>Proyectos, stack, enlaces, y diseño prolijo para entrevistas.</p>
-          </article>
-        </div>
-      </section>
-
-      <!-- INFORMATIVA -->
-      <section id="proceso">
-       
-        <div class="infoGrid">
-          <div class="infoBox">
-            <h3>1) Brief + objetivos</h3>
-            <p>Definimos el objetivo (vender, captar leads, informar) y el contenido.</p>
-            <ul>
-              <li>Secciones necesarias</li>
-              <li>Estilo/branding</li>
-              <li>Texto e imágenes</li>
-            </ul>
-          </div>
-
-          <div class="infoBox">
-            <h3>2) Diseño + implementación</h3>
-            <p>Maquetado prolijo, performance, y ajustes finales antes de publicar.</p>
-            <ul>
-              <li>HTML/CSS o framework</li>
-              <li>Optimización básica</li>
-              <li>Deploy / hosting</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACTO: FORM + IMAGEN DERECHA -->
-    <section id="contacto">
-  <div class="sectionTitle">
-    <h2>Contacto</h2>
-<div class="ideaBlock">
-  <img class="ideaIcon" src="./img/icono.png.png" alt="Idea" />
-  <span class="ideaText">¡Contame tu idea…!</span>
-</div>
-
-
+<!-- 3️⃣ CÓMO TRABAJO -->
+<section class="sectionWhite" id="como-trabajo">
+  <div class="container">
+    <h2>Cómo trabajo</h2>
+    
+    <div class="processGrid">
+      <div class="processStep">
+        <h3>Charlamos tu idea</h3>
+        <p>Definimos juntas qué querés comunicar, a quién y para qué.</p>
+      </div>
+      
+      <div class="processStep">
+        <h3>Diseño tu web</h3>
+        <p>Maqueto tu sitio con un diseño moderno, simple y pensado para celular.</p>
+      </div>
+      
+      <div class="processStep">
+        <h3>Publicamos y te acompaño</h3>
+        <p>Dejamos tu web online y te explico todo de forma clara. Si después necesitás ayuda, sigo cerca.</p>
+      </div>
+    </div>
   </div>
+</section>
 
+<!-- 4️⃣ DIFERENCIAL -->
+<section class="sectionRosa" id="diferencial">
+  <div class="container">
+    <h2>Trabajo de forma personalizada y cercana</h2>
+    
+    <p class="sectionLead">No trabajo con soluciones genéricas ni trato automático. Cada proyecto es distinto y lo encaro de manera individual.</p>
+    
+    <p class="sectionText">Te acompaño, te escucho y te explico todo sin tecnicismos, para que te sientas segura con tu web desde el primer día.</p>
+  </div>
+</section>
 
-  <div class="contactGrid">
+<!-- 5️⃣ PARA QUIÉN ES -->
+<section class="sectionWhite" id="para-quien">
+  <div class="container">
+    <h2>¿Para quién es este servicio?</h2>
+    
+    <div class="audienceList">
+      <div class="audienceItem">Emprendedores que recién empiezan</div>
+      <div class="audienceItem">Comercios chicos (peluquerías, estética, tiendas, etc.)</div>
+      <div class="audienceItem">Personas que quieren una web clara y fácil de usar</div>
+      <div class="audienceItem">Quienes valoran el trato humano y directo</div>
+    </div>
+  </div>
+</section>
+
+<!-- 6️⃣ EJEMPLOS / PORTAFOLIO (simplificado) -->
+<section class="sectionRosa" id="ejemplos">
+  <div class="container">
+    <h2>Algunos proyectos</h2>
+    
+    <div class="examplesGrid">
+      <div class="exampleCard">
+        <div class="exampleImage" style="background:linear-gradient(135deg, #FF6B9D, #FFC75F)"></div>
+        <h3>Tienda online</h3>
+        <p>Catálogo + carrito + WhatsApp directo</p>
+      </div>
+      
+      <div class="exampleCard">
+        <div class="exampleImage" style="background:linear-gradient(135deg, #667EEA, #764BA2)"></div>
+        <h3>Web de servicios</h3>
+        <p>Presentación clara + formulario de contacto</p>
+      </div>
+      
+      <div class="exampleCard">
+        <div class="exampleImage" style="background:linear-gradient(135deg, #F093FB, #F5576C)"></div>
+        <h3>Landing page</h3>
+        <p>Enfoque en una acción clara y directa</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7️⃣ CONTACTO -->
+<section class="sectionWhite" id="contacto">
+  <div class="container">
+    <h2>Contame tu idea</h2>
+    
+    <p class="sectionLead">No necesitás tener todo definido. Contame qué proyecto tenés en mente y vemos juntas qué tipo de web te conviene.</p>
+    
+    <p class="ctaNote">📲 Te respondo personalmente por WhatsApp.</p>
+    
     <form id="contactForm" novalidate>
       <div class="row">
         <div class="field">
           <label for="nombre">Nombre</label>
-          <input
-            id="nombre"
-            type="text"
-            placeholder="Tu nombre"
-            autocomplete="name"
-          />
+          <input id="nombre" type="text" placeholder="Tu nombre" autocomplete="name" />
         </div>
       </div>
 
       <div class="row">
         <div class="field">
-          <label for="tipo">Tipo de sitio</label>
-          <input
-            id="tipo"
-            type="text"
-            placeholder="Landing / Web / Portfolio"
-          />
+          <label for="tipo">¿Qué tipo de web necesitás?</label>
+          <input id="tipo" type="text" placeholder="Landing / Web / Tienda" />
         </div>
 
         <div class="field">
           <label for="presupuesto">Presupuesto (opcional)</label>
-          <input
-            id="presupuesto"
-            type="text"
-            placeholder="$..."
-            inputmode="numeric"
-          />
+          <input id="presupuesto" type="text" placeholder="$..." inputmode="numeric" />
         </div>
       </div>
-<div class="field">
-  <label for="referencia">Sitio de referencia (opcional)</label>
-  <input
-    id="referencia"
-    type="url"
-    placeholder="https://ejemplo.com"
-  />
-</div>
 
       <div class="field">
-        <label for="mensaje">Mensaje</label>
-        <textarea
-          id="mensaje"
-          placeholder="¿Qué necesitás?"
-        ></textarea>
+        <label for="mensaje">Tu idea</label>
+        <textarea id="mensaje" placeholder="Cuéntame qué tenés en mente..."></textarea>
       </div>
 
-      <button class="btn" id="btnEnviar" type="button">
-        Enviar
+      <button class="btn btnSubmit" id="btnEnviar" type="button">
+        Quiero hablar sobre mi web
       </button>
 
       <div class="formNote">
         * Al hacer click se abre WhatsApp con tu mensaje armado automáticamente.
       </div>
     </form>
-
-    <aside
-      class="contactImg"
-      aria-label="Imagen al lado del formulario"
-    ></aside>
   </div>
 </section>
 
-<section class="devicesSection" id="dispositivos">
-  <div class="devicesContainer">
-    <div class="devicesHeader">
-      <span class="devicesTag">DISEÑO RESPONSIVE</span>
-      <h2>Tu web se ve perfecta en <span class="devicesHighlight">cualquier dispositivo</span></h2>
-      <p>Diseño 100% responsive: celular, tablet y computadora. Tus clientes navegan y compran desde donde quieran.</p>
-    </div>
+</main>
 
-    <div class="devicesShowcase">
-      <!-- LAPTOP -->
-      <div class="device device--laptop">
-        <div class="laptopFrame">
-          <div class="laptopTop">
-            <span class="chromeDot"></span><span class="chromeDot"></span><span class="chromeDot"></span>
-          </div>
-
-          <div class="deviceScreen laptopScreen">
-            <div class="deviceShot laptopShot">
-              <img src="./img/img1.jpg" alt="Pantallazo 1" loading="lazy">
-              <img src="./img/img2.jpg" alt="Pantallazo 2" loading="lazy">
-              <img src="./img/img3.jpg" alt="Pantallazo 3" loading="lazy">
-              <img src="./img/img4.jpg" alt="Pantallazo 4" loading="lazy">
-              <img src="./img/img5.jpg" alt="Pantallazo 5" loading="lazy">
-            </div>
-          </div>
-
-          <div class="laptopBottom"></div>
-        </div>
-      </div>
-
-      <!-- PHONE -->
-      <div class="device device--phone">
-        <div class="phoneFrame">
-          <div class="phoneNotch"></div>
-          <div class="deviceScreen phoneScreen">
-            <div class="deviceShot phoneShot">
-              <img src="./img/img1.jpg" alt="Pantallazo 1" loading="lazy">
-              <img src="./img/img2.jpg" alt="Pantallazo 2" loading="lazy">
-              <img src="./img/img3.jpg" alt="Pantallazo 3" loading="lazy">
-              <img src="./img/img4.jpg" alt="Pantallazo 4" loading="lazy">
-              <img src="./img/img5.jpg" alt="Pantallazo 5" loading="lazy">
-            </div>
-          </div>
-          <div class="phoneBar"></div>
-        </div>
-      </div>
-
-      <!-- TABLET -->
-      <div class="device device--tablet">
-        <div class="tabletFrame">
-          <div class="tabletCam"></div>
-          <div class="deviceScreen tabletScreen">
-            <div class="deviceShot tabletShot">
-              <img src="./img/img1.jpg" alt="Pantallazo 1" loading="lazy">
-              <img src="./img/img2.jpg" alt="Pantallazo 2" loading="lazy">
-              <img src="./img/img3.jpg" alt="Pantallazo 3" loading="lazy">
-              <img src="./img/img4.jpg" alt="Pantallazo 4" loading="lazy">
-              <img src="./img/img5.jpg" alt="Pantallazo 5" loading="lazy">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <a class="devicesCta" href="https://wa.me/5493786417162?text=Hola%2C%20quiero%20una%20web%20responsive" target="_blank" rel="noopener">
-      QUIERO MI WEB RESPONSIVE
-    </a>
-  </div>
-</section>
-
+<!-- FOOTER -->
 <footer class="siteFooter">
   <nav class="footerNav" aria-label="Footer navegación">
-    <a href="#servicios">Servicios</a>
-    <a href="#proceso">Proceso</a>
+    <a href="#que-hago">Qué hago</a>
+    <a href="#como-trabajo">Cómo trabajo</a>
     <a href="#contacto">Contacto</a>
   </nav>
 
-  <img
-    class="footerLogo"
-    src="./img/logo.png"
-    alt="Natasha Paczko"
-  />
+  <img class="footerLogo" src="./img/logo.png" alt="Natasha Paczko" />
 
   <p class="footerCopy">
-    © <span id="y"></span> Natasha Paczko · Sitios web a medida
+    © <span id="y"></span> Natasha Paczko · Webs simples y modernas
   </p>
 </footer>
-
 
 <script src="./js/index.js" defer></script>
 </body>
 </html>
-
-  
-
-

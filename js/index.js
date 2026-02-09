@@ -38,4 +38,28 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeMenu();
   });
+
+  // Formulario WhatsApp
+  const form = document.getElementById("contactForm");
+  const btnEnviar = document.getElementById("btnEnviar");
+
+  if (btnEnviar && form) {
+    btnEnviar.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      const nombre = document.getElementById("nombre").value || "Sin nombre";
+      const tipo = document.getElementById("tipo").value || "No especificado";
+      const presupuesto = document.getElementById("presupuesto").value || "No especificado";
+      const mensaje = document.getElementById("mensaje").value || "Sin mensaje";
+
+      const whatsappMessage = encodeURIComponent(
+        `Hola! Soy ${nombre}.\n\nTipo de web: ${tipo}\nPresupuesto: ${presupuesto}\n\nMensaje:\n${mensaje}`
+      );
+
+      window.open(
+        `https://wa.me/5493786417162?text=${whatsappMessage}`,
+        "_blank"
+      );
+    });
+  }
 });
