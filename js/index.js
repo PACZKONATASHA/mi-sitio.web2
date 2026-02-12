@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Console greeting
+  console.log("👋 ¡Hola! Bienvenido a mi sitio web.");
+  console.log("Si estás viendo esto, ¡eres de los míos! 💻");
+  console.log("¿Necesitás una web? Escribime: https://wa.me/5493786417162");
+  
   // Año footer
   const y = document.getElementById("y");
   if (y) y.textContent = new Date().getFullYear();
