@@ -4,8 +4,10 @@
   --blanco: #FFFFFF;
   --fondo-claro: #F2EFEF;
   --texto-secundario: #9A9A9A;
+  --texto-secundario-fuerte: #6B6B6B;
   --texto-principal: #FFFFFF;
   --gris-border: #E0E0E0;
+  --gris-claro: #F2EFEF;
   --max: 1100px;
   --radius: 16px;
 }
@@ -272,14 +274,14 @@ a {
 
 .heroSub {
   font-size: 18px;
-  color: var(--gris-medio);
+  color: var(--texto-secundario-fuerte);
   margin: 0 0 16px;
   line-height: 1.6;
 }
 
 .heroSmall {
   font-size: 14px;
-  color: var(--gris-medio);
+  color: var(--texto-secundario-fuerte);
   margin: 0 0 32px;
   font-weight: 500;
 }
@@ -378,12 +380,14 @@ a {
 }
 
 .highlight {
-  padding: 14px 16px;
-  background: rgba(255, 255, 255, 0.15);
+  padding: 16px 20px;
+  background: rgba(0, 0, 0, 0.25);
   border-radius: 12px;
   margin-top: 16px;
   font-size: 15px;
   line-height: 1.6;
+  font-weight: 600;
+  color: var(--texto-principal);
 }
 
 /* ====== PROCESS GRID ====== */
@@ -628,10 +632,17 @@ a {
 
 .projectCta {
   margin-top: 32px;
+  padding: 20px 24px;
   font-size: 16px;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
   text-align: center;
   line-height: 1.6;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+  font-weight: 600;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (min-width: 768px) {
@@ -820,19 +831,20 @@ input,
 textarea {
   width: 100%;
   padding: 12px 14px;
-  border: 1px solid var(--gris-border);
+  border: 2px solid var(--gris-border);
   border-radius: 12px;
   font-size: 16px;
   font-family: inherit;
-  background: var(--gris-claro);
+  background: rgba(184, 116, 115, 0.08);
   color: var(--texto-oscuro);
   outline: none;
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease, background 0.2s ease;
 }
 
 input:focus,
 textarea:focus {
   border-color: var(--rosa);
+  background: rgba(184, 116, 115, 0.15);
 }
 
 textarea {
@@ -842,8 +854,13 @@ textarea {
 
 .ctaNote {
   font-size: 16px;
-  color: var(--gris-medio);
+  color: var(--texto-oscuro);
   margin: 16px 0 28px;
+  padding: 16px 20px;
+  background: rgba(184, 116, 115, 0.12);
+  border-radius: 12px;
+  font-weight: 600;
+  display: inline-block;
 }
 
 .btnSubmit {
