@@ -61,14 +61,14 @@ a {
   justify-content: center;
   width: 120px;
   height: 120px;
-  background: rgba(184, 116, 115, 0.15);
+  background: var(--rosa);
   border-radius: 50%;
   transition: all 0.3s ease;
   flex-shrink: 0;
 }
 
 .brand:hover {
-  background: rgba(184, 116, 115, 0.25);
+  background: var(--rosa-dark);
   transform: scale(1.05);
 }
 
@@ -935,12 +935,29 @@ textarea {
   color: var(--rosa);
 }
 
-.footerLogo {
-  height: 90px;
-  width: auto;
+.footerBrand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 140px;
+  background: var(--rosa);
+  border-radius: 50%;
   margin: 0 auto 20px;
+  transition: all 0.3s ease;
+}
+
+.footerBrand:hover {
+  background: var(--rosa-dark);
+  transform: scale(1.05);
+}
+
+.footerLogo {
+  height: 130px;
+  width: auto;
   display: block;
   transition: transform 0.3s ease;
+  object-fit: contain;
 }
 
 .footerLogo:hover {
