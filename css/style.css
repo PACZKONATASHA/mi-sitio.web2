@@ -10,6 +10,7 @@
   --gris-claro: #F2EFEF;
   --max: 1100px;
   --radius: 16px;
+  --gris-oscuro: #333333;
 }
 
 * {
@@ -285,19 +286,19 @@ a {
   font-size: clamp(28px, 5vw, 48px);
   font-weight: 800;
   line-height: 1.15;
-  color: var(--texto-oscuro);
+  color: var(--gris-oscuro);
 }
 
 .heroSub {
   font-size: 18px;
-  color: var(--texto-secundario-fuerte);
+  color: var(--gris-oscuro);
   margin: 0 0 16px;
   line-height: 1.6;
 }
 
 .heroSmall {
   font-size: 14px;
-  color: var(--texto-secundario-fuerte);
+  color: var(--gris-oscuro);
   margin: 0 0 32px;
   font-weight: 500;
 }
