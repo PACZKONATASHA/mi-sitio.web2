@@ -313,9 +313,20 @@ a {
   justify-content: center;
 }
 
+.heroActions .btn {
+  padding: 16px 24px;
+  font-size: 15px;
+  border-radius: 12px;
+}
+
 @media (min-width: 600px) {
   .heroActions {
     flex-direction: row;
+  }
+
+  .heroActions .btn {
+    padding: 12px 28px;
+    font-size: 15px;
   }
 }
 
