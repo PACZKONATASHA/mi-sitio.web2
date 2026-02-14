@@ -114,6 +114,22 @@ a {
   transform: translateY(-2px);
 }
 
+/* Botones dentro de secciones rosas (para que se vean sobre fondo rosa) */
+.sectionRosa .btn {
+  border-color: var(--blanco);
+  color: var(--blanco);
+}
+
+.sectionRosa .btn:hover {
+  background: var(--blanco);
+  color: var(--rosa);
+  transform: translateY(-2px);
+}
+
+.sectionRosa .projectInfo .btn {
+  margin-top: 16px;
+}
+
 .btn.secondary {
   border: 2px solid var(--rosa);
   background: transparent;
@@ -644,7 +660,6 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
-
 @media (min-width: 768px) {
   .projectHighlight {
     grid-template-columns: 1fr 1fr;
@@ -822,16 +837,18 @@ a {
 }
 
 label {
-  font-weight: 600;
-  font-size: 14px;
-  color: var(--texto-oscuro);
+  font-weight: 700;
+  font-size: 15px;
+  color: #333333;
+  text-transform: none;
+  letter-spacing: 0.3px;
 }
 
 input,
 textarea {
   width: 100%;
   padding: 12px 14px;
-  border: 2px solid var(--gris-border);
+  border: 3px solid #999999;
   border-radius: 12px;
   font-size: 16px;
   font-family: inherit;
