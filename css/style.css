@@ -108,14 +108,15 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 28px;
-  border-radius: 8px;
+  padding: 8px 24px;
+  border-radius: 6px;
   border: 2px solid var(--rosa);
   background: transparent;
   color: var(--rosa);
   cursor: pointer;
-  font-weight: 600;
-  font-size: 15px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.5px;
   transition: all 0.2s ease;
   white-space: nowrap;
 }
@@ -155,14 +156,16 @@ a {
 
 .btnSubmit {
   width: 100%;
-  padding: 14px 24px;
+  padding: 8px 24px;
   margin-top: 8px;
-  border-radius: 8px;
+  border-radius: 6px;
   border: 2px solid var(--rosa);
   background: transparent;
   color: var(--rosa);
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.5px;
   transition: all 0.2s ease;
 }
 
@@ -293,7 +296,7 @@ a {
 /* BANNER PRINCIPAL CON IMAGEN */
 .heroBanner {
   width: 100%;
-  height: 400px;
+  min-height: 450px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -301,6 +304,7 @@ a {
   align-items: center;
   justify-content: center;
   position: relative;
+  padding: 60px 20px;
 }
 
 .heroBanner::before {
@@ -318,23 +322,29 @@ a {
   z-index: 2;
   text-align: center;
   color: white;
+  max-width: 700px;
+  padding: 0 24px;
 }
 
 .heroBannerTitle {
-  margin: 0 0 24px;
-  font-size: clamp(36px, 6vw, 64px);
+  margin: 0 0 28px;
+  font-size: clamp(28px, 5vw, 52px);
   font-weight: 800;
-  line-height: 1.2;
+  line-height: 1.25;
   color: white;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.5px;
 }
 
 .btnBanner {
   background: rgba(184, 116, 115, 0.9) !important;
   color: white !important;
   border-color: transparent !important;
-  padding: 14px 32px !important;
-  font-weight: 600 !important;
+  padding: 8px 24px !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  letter-spacing: 0.5px !important;
+  border-radius: 6px !important;
 }
 
 .btnBanner:hover {
@@ -427,9 +437,9 @@ a {
 }
 
 .heroActions .btn {
-  padding: 12px 28px;
-  font-size: 15px;
-  border-radius: 8px;
+  padding: 8px 24px;
+  font-size: 13px;
+  border-radius: 6px;
   width: fit-content;
 }
 
@@ -536,9 +546,9 @@ a {
 
   .heroActions .btn {
     width: 100%;
-    padding: 12px 20px;
-    font-size: 14px;
-    border-radius: 8px;
+    padding: 8px 20px;
+    font-size: 13px;
+    border-radius: 6px;
     text-align: center;
   }
 }
@@ -1239,8 +1249,8 @@ a {
 
 /* ====== CONTACT FORM ====== */
 #contactForm {
-  max-width: 500px;
-  margin: 36px auto 0;
+  max-width: 100%;
+  margin: 0;
 }
 
 .row {
@@ -1262,31 +1272,38 @@ a {
 }
 
 label {
-  font-weight: 700;
-  font-size: 15px;
-  color: #333333;
-  text-transform: none;
-  letter-spacing: 0.3px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--rosa-dark);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 input,
 textarea {
   width: 100%;
-  padding: 12px 14px;
-  border: 3px solid #999999;
-  border-radius: 12px;
-  font-size: 16px;
+  padding: 14px 16px;
+  border: 2px solid var(--rosa);
+  border-radius: 10px;
+  font-size: 15px;
   font-family: inherit;
-  background: rgba(184, 116, 115, 0.08);
+  background: rgba(184, 116, 115, 0.06);
   color: var(--texto-oscuro);
   outline: none;
-  transition: border-color 0.2s ease, background 0.2s ease;
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
 
 input:focus,
 textarea:focus {
-  border-color: var(--rosa);
-  background: rgba(184, 116, 115, 0.15);
+  border-color: var(--rosa-dark);
+  background: rgba(184, 116, 115, 0.12);
+  box-shadow: 0 0 0 4px rgba(184, 116, 115, 0.15);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #bbb;
 }
 
 textarea {
@@ -1295,25 +1312,37 @@ textarea {
 }
 
 .ctaNote {
-  font-size: 16px;
-  color: var(--texto-oscuro);
-  margin: 16px 0 28px;
-  padding: 16px 20px;
-  background: rgba(184, 116, 115, 0.12);
-  border-radius: 12px;
+  font-size: 15px;
+  color: var(--rosa-dark);
+  margin: 0 0 24px;
+  padding: 14px 18px;
+  background: rgba(184, 116, 115, 0.1);
+  border-left: 4px solid var(--rosa);
+  border-radius: 8px;
   font-weight: 600;
-  display: inline-block;
 }
 
 .btnSubmit {
   width: 100%;
-  padding: 14px 24px;
+  padding: 10px 24px;
   margin-top: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  background: var(--rosa) !important;
+  color: white !important;
+  border: 2px solid var(--rosa) !important;
+  border-radius: 6px !important;
+}
+
+.btnSubmit:hover {
+  background: var(--rosa-dark) !important;
+  border-color: var(--rosa-dark) !important;
 }
 
 .formNote {
   font-size: 12px;
-  color: var(--gris-medio);
+  color: var(--texto-secundario);
   margin-top: 12px;
   text-align: center;
 }
@@ -1323,9 +1352,27 @@ textarea {
   margin-top: 0;
 }
 
+/* DESKTOP: TWO COLUMNS */
+@media (min-width: 768px) {
+  .contactSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 600px;
+  }
+
+  .contactBanner {
+    min-height: 100%;
+  }
+
+  .contactBody {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .contactBanner {
   width: 100%;
-  min-height: 400px;
+  min-height: 350px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1333,7 +1380,7 @@ textarea {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 60px 20px;
+  padding: 60px 30px;
 }
 
 .contactBanner::before {
@@ -1343,19 +1390,19 @@ textarea {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.35);
 }
 
 .contactBannerContent {
   position: relative;
   z-index: 2;
   text-align: center;
-  max-width: 600px;
+  max-width: 500px;
 }
 
 .contactBannerTitle {
   margin: 0 0 20px;
-  font-size: clamp(36px, 6vw, 64px);
+  font-size: clamp(36px, 5vw, 56px);
   font-weight: 300;
   line-height: 1.2;
   color: white;
@@ -1379,12 +1426,17 @@ textarea {
 
 .contactBody {
   background: var(--fondo-claro);
-  padding: 60px 20px;
+  padding: 50px 30px;
 }
 
-@media (max-width: 600px) {
+.contactBody .container {
+  max-width: 500px;
+}
+
+@media (max-width: 767px) {
   .contactBanner {
-    height: 220px;
+    min-height: 280px;
+    padding: 40px 20px;
   }
   .contactBannerTitle {
     font-size: 28px;
