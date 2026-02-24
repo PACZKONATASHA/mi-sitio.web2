@@ -182,18 +182,17 @@
     <h2>Cómo trabajo</h2>
     
     <div class="processGrid">
-      <!-- CARD 1 -->
-      <div class="processCard">
-        <div class="processCardImg">
-          <img src="./img/charlamos-tu-idea.jpg" alt="Charlamos tu idea">
-          <span class="processNumber">1</span>
-        </div>
-        <h3 class="processCardTitle">Charlamos tu idea</h3>
-        <button class="processBtn" onclick="this.parentElement.classList.toggle('open')">
-          Leer + 
-        </button>
-        <div class="processCardDetail">
-          <p>Definimos juntas qué querés comunicar, a quién y para qué.</p>
+      <!-- CARD 1: BANNER -->
+      <div class="processCard processCardBanner" style="background-image: url('./img/charlamos-tu-idea.jpg');">
+        <div class="processCardBannerContent">
+          <span class="processNumber processBannerNum">1</span>
+          <h3 class="processCardTitle processBannerTitle">Charlamos tu idea</h3>
+          <button class="processBtn processBannerBtn" onclick="this.parentElement.parentElement.classList.toggle('open')">
+            Leer + 
+          </button>
+          <div class="processCardDetail">
+            <p>Definimos juntas qué querés comunicar, a quién y para qué.</p>
+          </div>
         </div>
       </div>
       
@@ -292,47 +291,55 @@
 </section>
 
 <!-- 8️⃣ CONTACTO -->
-<section class="sectionWhite" id="contacto">
-  <div class="container">
-    <h2>Contame tu idea</h2>
-    
-    <p class="sectionLead">No necesitás tener todo definido. Contame qué proyecto tenés en mente y vemos juntas qué tipo de web te conviene.</p>
-    
-    <p class="ctaNote">Te respondo personalmente por WhatsApp.</p>
-    
-    <form id="contactForm" novalidate>
-      <div class="row">
-        <div class="field">
-          <label for="nombre">Nombre</label>
-          <input id="nombre" type="text" placeholder="Tu nombre" autocomplete="name" />
+<section class="contactSection" id="contacto">
+  <!-- BANNER CONTACTO -->
+  <div class="contactBanner" style="background-image: url('./img/foto-banner-formu.png');">
+    <div class="contactBannerContent">
+      <h2 class="contactBannerTitle">Contame tu idea</h2>
+    </div>
+  </div>
+
+  <!-- FORMULARIO -->
+  <div class="contactBody">
+    <div class="container">
+      <p class="sectionLead">No necesitás tener todo definido. Contame qué proyecto tenés en mente y vemos juntas qué tipo de web te conviene.</p>
+      
+      <p class="ctaNote">Te respondo personalmente por WhatsApp.</p>
+      
+      <form id="contactForm" novalidate>
+        <div class="row">
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" type="text" placeholder="Tu nombre" autocomplete="name" />
+          </div>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="field">
-          <label for="tipo">¿Qué tipo de web necesitás?</label>
-          <input id="tipo" type="text" placeholder="Landing / Web / Tienda" />
+        <div class="row">
+          <div class="field">
+            <label for="tipo">¿Qué tipo de web necesitás?</label>
+            <input id="tipo" type="text" placeholder="Landing / Web / Tienda" />
+          </div>
+
+          <div class="field">
+            <label for="presupuesto">Presupuesto (opcional)</label>
+            <input id="presupuesto" type="text" placeholder="$..." inputmode="numeric" />
+          </div>
         </div>
 
         <div class="field">
-          <label for="presupuesto">Presupuesto (opcional)</label>
-          <input id="presupuesto" type="text" placeholder="$..." inputmode="numeric" />
+          <label for="mensaje">Tu idea</label>
+          <textarea id="mensaje" placeholder="Cuéntame qué tenés en mente..."></textarea>
         </div>
-      </div>
 
-      <div class="field">
-        <label for="mensaje">Tu idea</label>
-        <textarea id="mensaje" placeholder="Cuéntame qué tenés en mente..."></textarea>
-      </div>
+        <button class="btn btnSubmit" id="btnEnviar" type="button">
+          Quiero hablar sobre mi web
+        </button>
 
-      <button class="btn btnSubmit" id="btnEnviar" type="button">
-        Quiero hablar sobre mi web
-      </button>
-
-      <div class="formNote">
-        * Al hacer click se abre WhatsApp con tu mensaje armado automáticamente.
-      </div>
-    </form>
+        <div class="formNote">
+          * Al hacer click se abre WhatsApp con tu mensaje armado automáticamente.
+        </div>
+      </form>
+    </div>
   </div>
 </section>
 

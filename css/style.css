@@ -649,7 +649,7 @@ a {
 }
 
 .processCard {
-  background: var(--fondo-claro);
+  background-color: var(--fondo-claro);
   border-radius: 14px;
   overflow: hidden;
   text-align: center;
@@ -707,7 +707,7 @@ a {
 .processBtn {
   display: inline-block;
   margin: 6px auto 0;
-  padding: 6px 22px;
+  padding: 8px 24px;
   background: transparent;
   border: 2px solid var(--rosa);
   color: var(--rosa-dark);
@@ -755,6 +755,69 @@ a {
     gap: 28px;
     max-width: 1100px;
   }
+}
+
+/* CARD 1 BANNER STYLE */
+.processCardBanner {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 280px;
+  padding-bottom: 0;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.processCardBanner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 14px;
+}
+
+.processCardBannerContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  min-height: 280px;
+  text-align: center;
+}
+
+.processBannerNum {
+  position: static !important;
+  transform: none !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: var(--rosa) !important;
+  margin-bottom: 8px;
+}
+
+.processBannerTitle {
+  color: white !important;
+  font-size: 20px !important;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+.processBannerBtn {
+  border-color: white !important;
+  color: white !important;
+}
+
+.processBannerBtn:hover {
+  background: white !important;
+  color: var(--rosa) !important;
+}
+
+.processCardBanner .processCardDetail p {
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* ====== AUDIENCE LIST ====== */
@@ -839,8 +902,8 @@ a {
   padding: 18px 20px;
   background: var(--blanco);
   border-radius: 12px;
+  border: 2px solid var(--rosa);
   text-align: center;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
 }
 
@@ -873,11 +936,11 @@ a {
 
 /* BOTÓN LEER+ REASONS */
 .reasonBtn {
-  padding: 6px 20px;
+  padding: 8px 24px;
   background: transparent;
   border: 2px solid var(--rosa);
   color: var(--rosa-dark);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   border-radius: 6px;
   cursor: pointer;
@@ -1253,6 +1316,66 @@ textarea {
   color: var(--gris-medio);
   margin-top: 12px;
   text-align: center;
+}
+
+/* ====== CONTACT SECTION WITH BANNER ====== */
+.contactSection {
+  margin-top: 0;
+}
+
+.contactBanner {
+  width: 100%;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.contactBanner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.contactBannerContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.contactBannerTitle {
+  margin: 0;
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 300;
+  line-height: 1.2;
+  color: white;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+}
+
+.contactBody {
+  background: var(--fondo-claro);
+  padding: 60px 20px;
+}
+
+@media (max-width: 600px) {
+  .contactBanner {
+    height: 220px;
+  }
+  .contactBannerTitle {
+    font-size: 28px;
+  }
+  .contactBody {
+    padding: 40px 16px;
+  }
 }
 
 /* ====== FOOTER ====== */
