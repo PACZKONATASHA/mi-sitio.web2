@@ -22,7 +22,7 @@
     <a href="#que-hago">Qué hago</a>
     <a href="#por-que-web">Por qué web</a>
     <a href="#como-trabajo">Cómo trabajo</a>
-    <a href="#contacto">Contacto</a>
+    
   </nav>
 
   <a class="btn cta desktopOnly" href="#contacto">contacto</a>
@@ -34,7 +34,6 @@
     <a href="#por-que-web">Por qué web</a>
     <a href="#como-trabajo">Cómo trabajo</a>
     <a href="#contacto">Contacto</a>
-    <a class="btn cta menuCta mobileOnly" href="#contacto">Contacto</a>
   </nav>
 </header>
 
@@ -46,7 +45,7 @@
   <div class="heroBanner" style="background-image: url('./img/escritorio-rosa.avif');">
     <div class="heroBannerContent">
       <h1 class="heroBannerTitle">Diseño sitios web simples y modernos para negocios chicos y emprendedores.</h1>
-      <a class="btn btnBanner" href="#Mis trabajos ">mis trabajos</a>
+      <a class="btn btnBanner" href="#mis-trabajos">Mis trabajos</a>
     </div>
   </div>
 
@@ -64,6 +63,9 @@
           <p>Trabajo de manera personalizada y cercana, acompañándote en todo el proceso.</p>
           <footer class="quoteAuthor"></footer>
         </blockquote>
+        <p class="heroDescription">
+          Te acompaño, te escucho y te explico todo sin tecnicismos ,para que te sientas segura con tu web desde el primer día.
+        </p>
         <div class="heroActions">
           <a class="btn" href="https://wa.me/5493786417162?text=Hola%2C%20quiero%20consultar%20por%20una%20web" target="_blank" rel="noopener">
              Quiero mi web
@@ -71,11 +73,6 @@
         </div>
       </div>
     </div>
-
-    <!-- DESCRIPCIÓN DEBAJO -->
-    <p class="heroDescription">
-       Te acompaño, te escucho y te explico todo sin tecnicismos.
-    </p>
   </div>
 </section>
 
@@ -141,16 +138,17 @@
     
     <div class="processGrid">
       <!-- CARD 1: BANNER -->
-      <div class="processCard processCardBanner" style="background-image: url('./img/charlamos-tu-idea.jpg');">
-        <div class="processCardBannerContent">
-          <span class="processNumber processBannerNum">1</span>
-          <h3 class="processCardTitle processBannerTitle">Charlamos tu idea</h3>
-          <button class="processBtn processBannerBtn" onclick="this.parentElement.parentElement.classList.toggle('open')">
-            Leer + 
-          </button>
-          <div class="processCardDetail">
-            <p>Definimos juntas qué querés comunicar, a quién y para qué.</p>
-          </div>
+      <div class="processCard">
+        <div class="processCardImg">
+          <img src="./img/charlamos1.jpg" alt="Diseño tu web">
+        </div>
+        <span class="processNumber">1</span>
+        <h3 class="processCardTitle">charlamos</h3>
+        <button class="processBtn" onclick="this.parentElement.classList.toggle('open')">
+          Leer + 
+        </button>
+        <div class="processCardDetail">
+          <p>Definimos juntas qué querés comunicar, a quién y para qué.</p>
         </div>
       </div>
       
@@ -158,8 +156,8 @@
       <div class="processCard">
         <div class="processCardImg">
           <img src="./img/diseño-web.jpg" alt="Diseño tu web">
-          <span class="processNumber">2</span>
         </div>
+        <span class="processNumber">2</span>
         <h3 class="processCardTitle">Diseño tu web</h3>
         <button class="processBtn" onclick="this.parentElement.classList.toggle('open')">
           Leer + 
@@ -172,9 +170,9 @@
       <!-- CARD 3 -->
       <div class="processCard">
         <div class="processCardImg">
-          <img src="./img/guardar-imagen.jpg" alt="Publicamos y te acompaño">
-          <span class="processNumber">3</span>
+          <img class="imgCenter" src="./img/sitio-web.jpg" alt="Publicamos y te acompaño">
         </div>
+        <span class="processNumber">3</span>
         <h3 class="processCardTitle">Publicamos y te acompaño</h3>
         <button class="processBtn" onclick="this.parentElement.classList.toggle('open')">
           Leer + 
@@ -194,7 +192,6 @@
     
     <p class="sectionLead">No trabajo con soluciones genéricas ni trato automático. Cada proyecto es distinto y lo encaro de manera individual.</p>
     
-    <p class="sectionText">Te acompaño, te escucho y te explico todo sin tecnicismos, para que te sientas segura con tu web desde el primer día.</p>
   </div>
 </section>
 
@@ -278,16 +275,13 @@
             <label for="tipo">¿Qué tipo de web necesitás?</label>
             <input id="tipo" type="text" placeholder="Landing / Web / Tienda" />
           </div>
-
-          <div class="field">
-            <label for="presupuesto">Presupuesto (opcional)</label>
-            <input id="presupuesto" type="text" placeholder="$..." inputmode="numeric" />
-          </div>
         </div>
 
-        <div class="field">
-          <label for="mensaje">Tu idea</label>
-          <textarea id="mensaje" placeholder="Cuéntame qué tenés en mente..."></textarea>
+        <div class="row">
+          <div class="field">
+            <label for="mensaje">Tu idea</label>
+            <textarea id="mensaje" placeholder="Cuéntame qué tenés en mente..."></textarea>
+          </div>
         </div>
 
         <button class="btn btnSubmit" id="btnEnviar" type="button">

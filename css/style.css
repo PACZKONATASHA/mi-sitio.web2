@@ -328,9 +328,9 @@ a {
 
 .heroBannerTitle {
   margin: 0 0 28px;
-  font-size: clamp(28px, 5vw, 52px);
+  font-size: clamp(36px, 6vw, 64px);
   font-weight: 800;
-  line-height: 1.25;
+  line-height: 1.2;
   color: white;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
   letter-spacing: -0.5px;
@@ -434,8 +434,7 @@ a {
   color: var(--texto-secundario);
   line-height: 1.8;
   margin: 0;
-  max-width: 450px;
-  text-align: center;
+  text-align: left;
 }
 
 .heroActions {
@@ -491,7 +490,7 @@ a {
   }
 
   .heroBannerTitle {
-    font-size: 24px;
+    font-size: 30px;
   }
 
   .heroContent {
@@ -697,30 +696,32 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
   display: block;
 }
 
+.processCardImg img.imgCenter {
+  object-position: center 55%;
+}
+
 .processNumber {
-  position: absolute;
-  bottom: 12px;
-  left: 50%;
-  transform: translateX(-50%);
   width: 44px;
   height: 44px;
-  background: var(--rosa);
-  color: white;
+  background: transparent;
+  color: var(--rosa);
+  border: 2px solid var(--rosa);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  font-weight: 800;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-weight: 300;
+  margin: 14px auto 0;
 }
 
 /* TÍTULO DE CARD */
 .processCardTitle {
-  margin: 14px 12px 6px;
+  margin: 8px 12px 6px;
   font-size: 16px;
   font-weight: 700;
   color: var(--texto-oscuro);
@@ -1297,8 +1298,10 @@ textarea::placeholder {
 }
 
 textarea {
-  min-height: 120px;
-  resize: vertical;
+  min-height: 0;
+  height: auto;
+  resize: none;
+  overflow: hidden;
 }
 
 .ctaNote {
