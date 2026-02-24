@@ -4,6 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Diseño de Webs Simples y Modernas | Natasha Paczko</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 
@@ -104,39 +107,69 @@
     
     <div class="reasonsGrid">
       <div class="reasonCard">
-        <div class="reasonNumber">1</div>
+        <span class="reasonNumber">1</span>
         <h3>Tu espacio propio</h3>
-        <p>Instagram depende de Meta. Si cambian el algoritmo o desaparece, tu presencia se va. Tu web es tuya para siempre.</p>
+        <button class="reasonBtn" onclick="this.parentElement.classList.toggle('open')">
+          Leer +
+        </button>
+        <div class="reasonDetail">
+          <p>Instagram depende de Meta. Si cambian el algoritmo o desaparece, tu presencia se va. Tu web es tuya para siempre.</p>
+        </div>
       </div>
       
       <div class="reasonCard">
-        <div class="reasonNumber">2</div>
+        <span class="reasonNumber">2</span>
         <h3>Confianza profesional</h3>
-        <p>Una web propia transmite profesionalismo. Tus clientes sienten que eres un negocio establecido, no solo alguien con Instagram.</p>
+        <button class="reasonBtn" onclick="this.parentElement.classList.toggle('open')">
+          Leer +
+        </button>
+        <div class="reasonDetail">
+          <p>Una web propia transmite profesionalismo. Tus clientes sienten que eres un negocio establecido, no solo alguien con Instagram.</p>
+        </div>
       </div>
       
       <div class="reasonCard">
-        <div class="reasonNumber">3</div>
+        <span class="reasonNumber">3</span>
         <h3>Contacto claro y directo</h3>
-        <p>En tu web controlas cómo contactarte. Un formulario, WhatsApp directo, teléfono. No compites con el ruido de Instagram.</p>
+        <button class="reasonBtn" onclick="this.parentElement.classList.toggle('open')">
+          Leer +
+        </button>
+        <div class="reasonDetail">
+          <p>En tu web controlas cómo contactarte. Un formulario, WhatsApp directo, teléfono. No compites con el ruido de Instagram.</p>
+        </div>
       </div>
       
       <div class="reasonCard">
-        <div class="reasonNumber">4</div>
+        <span class="reasonNumber">4</span>
         <h3>Google te encuentra</h3>
-        <p>Tu web aparece en Google. Cuando alguien busca "peluquería en [tu ciudad]", te encuentra. Instagram no aparece en búsquedas.</p>
+        <button class="reasonBtn" onclick="this.parentElement.classList.toggle('open')">
+          Leer +
+        </button>
+        <div class="reasonDetail">
+          <p>Tu web aparece en Google. Cuando alguien busca "peluquería en [tu ciudad]", te encuentra. Instagram no aparece en búsquedas.</p>
+        </div>
       </div>
       
       <div class="reasonCard">
-        <div class="reasonNumber">5</div>
+        <span class="reasonNumber">5</span>
         <h3>Control total</h3>
-        <p>Diseñas tu web como quieras. Sin limitaciones de plataforma. Muestra exactamente lo que importa a tus clientes.</p>
+        <button class="reasonBtn" onclick="this.parentElement.classList.toggle('open')">
+          Leer +
+        </button>
+        <div class="reasonDetail">
+          <p>Diseñas tu web como quieras. Sin limitaciones de plataforma. Muestra exactamente lo que importa a tus clientes.</p>
+        </div>
       </div>
       
       <div class="reasonCard">
-        <div class="reasonNumber">6</div>
+        <span class="reasonNumber">6</span>
         <h3>Clientes de verdad</h3>
-        <p>Quienes buscan en Google están listos para comprar. No son curiosos. Es gente que realmente necesita tus servicios.</p>
+        <button class="reasonBtn" onclick="this.parentElement.classList.toggle('open')">
+          Leer +
+        </button>
+        <div class="reasonDetail">
+          <p>Quienes buscan en Google están listos para comprar. No son curiosos. Es gente que realmente necesita tus servicios.</p>
+        </div>
       </div>
     </div>
 
