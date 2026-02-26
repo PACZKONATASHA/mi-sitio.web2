@@ -39,21 +39,73 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "Escape") closeMenu();
   });
 
-  // Formulario WhatsApp
+  // Formulario WhatsApp con validaciones
   const form = document.getElementById("contactForm");
   const btnEnviar = document.getElementById("btnEnviar");
 
+  // Función para mostrar error
+  const showError = (input, message) => {
+    const field = input.closest('.field');
+    const existingError = field.querySelector('.error-message');
+    if (existingError) existingError.remove();
+    
+    input.classList.add('input-error');
+    const errorDiv = document.createElement('div');
+    errorDiv.className = 'error-message';
+    errorDiv.textContent = message;
+    errorDiv.style.cssText = 'color: #e74c3c; font-size: 12px; margin-top: 4px;';
+    field.appendChild(errorDiv);
+  };
+
+  // Función para limpiar error
+  const clearError = (input) => {
+    const field = input.closest('.field');
+    const existingError = field.querySelector('.error-message');
+    if (existingError) existingError.remove();
+    input.classList.remove('input-error');
+  };
+
+  // Validar campo
+  const validateField = (input, fieldName) => {
+    const value = input.value.trim();
+    if (!value) {
+      showError(input, `Por favor ingresá tu ${fieldName}`);
+      return false;
+    }
+    clearError(input);
+    return true;
+  };
+
   if (btnEnviar && form) {
+    // Limpiar errores al escribir
+    form.querySelectorAll('input, textarea').forEach(input => {
+      input.addEventListener('input', () => clearError(input));
+    });
+
     btnEnviar.addEventListener("click", (e) => {
       e.preventDefault();
 
-      const nombre = document.getElementById("nombre").value || "Sin nombre";
-      const tipo = document.getElementById("tipo").value || "No especificado";
-      const presupuesto = document.getElementById("presupuesto").value || "No especificado";
-      const mensaje = document.getElementById("mensaje").value || "Sin mensaje";
+      const nombreInput = document.getElementById("nombre");
+      const tipoInput = document.getElementById("tipo");
+      const mensajeInput = document.getElementById("mensaje");
+
+      // Validaciones
+      let isValid = true;
+      
+      if (!validateField(nombreInput, 'nombre')) isValid = false;
+      if (!validateField(tipoInput, 'tipo de web')) isValid = false;
+      if (!validateField(mensajeInput, 'idea o mensaje')) isValid = false;
+
+      if (!isValid) {
+        return; // No enviar si hay errores
+      }
+
+      const nombre = nombreInput.value.trim();
+      const tipo = tipoInput.value.trim();
+      const mensaje = mensajeInput.value.trim();
 
       const whatsappMessage = encodeURIComponent(
-        `Hola! Soy ${nombre}.\n\nTipo de web: ${tipo}\nPresupuesto: ${presupuesto}\n\nMensaje:\n${mensaje}`
+        `Hola! Soy ${nombre}.\n\nTipo de web: ${tipo}\n\nMi idea:\n${mensaje}`
       );
 
       window.open(

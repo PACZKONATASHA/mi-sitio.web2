@@ -1297,6 +1297,19 @@ textarea::placeholder {
   color: #bbb;
 }
 
+/* Error en inputs */
+input.input-error,
+textarea.input-error {
+  border-color: #e74c3c;
+  background: rgba(231, 76, 60, 0.06);
+}
+
+input.input-error:focus,
+textarea.input-error:focus {
+  border-color: #e74c3c;
+  box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.15);
+}
+
 textarea {
   min-height: 0;
   height: auto;
